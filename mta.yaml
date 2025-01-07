@@ -1,0 +1,23 @@
+ID: sap_taskui
+_schema-version: "3.1"
+version: 1.0.0
+
+modules:
+  - name: sap_taskui
+    type: html5
+    path: webapp
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    build-parameters:
+      builder: grunt
+      build-result: dist
+      supported-platforms: []
+      build-timeout: 15
+
+resources:
+  - name: sap_taskui_dest
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite

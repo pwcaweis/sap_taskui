@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="sap_taskui.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App>
+        <Page title="Task UI">
+            <content>
+                <VBox>
+                    <Label text="First Name"/>
+                    <Input id="firstName"/>
+                    <Label text="Last Name"/>
+                    <Input id="lastName"/>
+                </VBox>
+            </content>
+        </Page>
+    </App>
+</mvc:View>
