@@ -7,9 +7,9 @@
             <content>
                 <VBox>
                     <Label text="First Name"/>
-                    <Input id="firstName"/>
+                    <Input value="{/firstName}" id="firstName"/>
                     <Label text="Last Name"/>
-                    <Input id="lastName"/>
+                    <Input value="{/lastName}" id="lastName"/>
                 </VBox>
             </content>
         </Page>

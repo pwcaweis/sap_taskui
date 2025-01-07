@@ -11,19 +11,6 @@ sap.ui.define(
         });
         // Set the model to the view
         this.getView().setModel(oModel);
-
-        // Attach event handler to the input fields (if needed)
-        var oFirstNameInput = this.byId("firstName");
-        var oLastNameInput = this.byId("lastName");
-
-        oFirstNameInput.attachChange(this.onInputChange, this);
-        oLastNameInput.attachChange(this.onInputChange, this);
-      },
-
-      onInputChange: function (oEvent) {
-        // Handle input change event
-        var sValue = oEvent.getParameter("value");
-        console.log("Input changed: " + sValue);
       },
     });
   }
