@@ -1,0 +1,61 @@
+{
+  "sap.app": {
+    "id": "sap_taskui",
+    "type": "application",
+    "applicationVersion": "1.0.0",
+    "dataSources": {
+      "mainService": {
+        "uri": "/path/to/your/service",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "sap_taskui.view.App",
+      "type": "XML",
+      "async": true
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "sap_taskui.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "app",
+          "target": "app"
+        }
+      ],
+      "targets": {
+        "app": {
+          "viewName": "App",
+          "viewLevel": 1
+        }
+      }
+    }
+  }
+}

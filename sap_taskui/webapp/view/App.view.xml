@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View
+    controllerName="sap_taskui.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Task UI">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Input
+                    placeholder="Firstname"
+                    value="{/firstname}" />
+                <Input
+                    placeholder="Lastname"
+                    value="{/lastname}" />
+                <Button
+                    text="Submit"
+                    press="onSubmit" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

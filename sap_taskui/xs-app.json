@@ -1,0 +1,18 @@
+{
+  "welcome": {
+    "source": "webapp/index.html"
+  },
+  "routes": [
+    {
+      "source": "^/webapp/(.*)$",
+      "target": "$1",
+      "service": "ui5"
+    }
+  ],
+  "services": {
+    "ui5": {
+      "type": "xsjs",
+      "url": "/sapui5"
+    }
+  }
+}
